@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "home-assist-ce12b": {
+      "hosting": {
+        "home-assist": [
+          "home-assist-ce12b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "home-assist-ce12b"
+  }
+}
