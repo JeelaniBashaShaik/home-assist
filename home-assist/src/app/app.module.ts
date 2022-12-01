@@ -11,13 +11,15 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { WaterLevelIndicatorComponent } from './water-level-indicator/water-level-indicator.component';
 import { PointStatusComponent } from './point-status/point-status.component';
 import { SensorStatusComponent } from './sensor-status/sensor-status.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WaterLevelIndicatorComponent,
     PointStatusComponent,
-    SensorStatusComponent
+    SensorStatusComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
