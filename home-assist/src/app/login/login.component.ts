@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   @Output() submitEM = new EventEmitter();
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
   submit() {
     if (this.form.valid) {
       this.submitEM.emit(this.form.value);
+      this.router.navigate(['landing-page']);
     }
   }
   
