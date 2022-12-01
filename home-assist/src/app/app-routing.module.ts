@@ -4,12 +4,14 @@ import { WaterLevelIndicatorComponent } from '../app/water-level-indicator/water
 import { LoginComponent } from './login/login.component';
 import { PointStatusComponent } from './point-status/point-status.component';
 import { SensorStatusComponent } from './sensor-status/sensor-status.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: '/water-level', component: WaterLevelIndicatorComponent },
   { path: '/point-status', component: PointStatusComponent },
   { path: '/sensor-status', component: SensorStatusComponent },
-  { path: '/login', component: LoginComponent }
+  { path: '/login', component: LoginComponent },
+  {path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({
