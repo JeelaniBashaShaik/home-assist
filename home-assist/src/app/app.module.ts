@@ -52,8 +52,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AngularFireDatabaseModule,
     MatSlideToggleModule,
     MatIconModule,
-    MatCardModule,
-    FormsModule,
     FormsModule,
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
