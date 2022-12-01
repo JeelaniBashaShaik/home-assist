@@ -8,10 +8,18 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { WaterLevelIndicatorComponent } from './water-level-indicator/water-level-indicator.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PointStatusComponent } from './point-status/point-status.component';
+import { SensorStatusComponent } from './sensor-status/sensor-status.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WaterLevelIndicatorComponent,
+    DashboardComponent,
+    PointStatusComponent,
+    SensorStatusComponent
   ],
   imports: [
     BrowserModule,
