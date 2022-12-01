@@ -59,10 +59,10 @@
                 <mat-card-subtitle>{{sensor.location}}</mat-card-subtitle>
                 <div class="row">
                     <div class="col-6 text-align-start vertical-align-middle">
-                        <span style="padding-top: 8px;" class="material-icons vertical-align-middle"  [class.profile-icon-active] = "'true'">{{sensor.icon}}</span>
+                        <span style="padding-top: 8px;" class="material-icons vertical-align-middle"  [class.profile-icon-active] = "sensor.shouldNotify">{{sensor.icon}}</span>
                     </div>
                     <div class="col-6 padding-left-zero padding-right-zero text-align-start">
-                        <span class="material-icons vertical-align-middle "  [class.profile-icon-active] = "'true'">notification_important</span>
+                        <span class="material-icons vertical-align-middle "  [class.profile-icon-active] = "sensor.shouldNotify">notification_important</span>
                         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
                             <mat-icon>more_vert</mat-icon>
                           </button>
@@ -88,7 +88,18 @@
         <mat-card-header>
           <mat-card-title>Water Level</mat-card-title>
         </mat-card-header>
-        <mat-card-content> </mat-card-content>
+        <mat-card-content>
+            <ngx-gauge style="padding-top: 50px;" [type]="gaugeType" 
+            [value]="gaugeValue" 
+            [label]="gaugeLabel"
+            [size]="size"
+            [thick]="thick"
+            [foregroundColor]="'rgb(255, 165, 0)'"
+            [backgroundColor]="'rgb(128,128,128)'"
+            [animate]="true"
+            [append]="gaugeAppendText">
+            </ngx-gauge>
+        </mat-card-content>
       </mat-card>
     </div>
   </div>
