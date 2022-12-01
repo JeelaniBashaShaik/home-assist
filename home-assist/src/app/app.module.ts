@@ -21,6 +21,8 @@ import { WaterLevelIndicatorComponent } from './water-level-indicator/water-leve
 import { PointStatusComponent } from './point-status/point-status.component';
 import { SensorStatusComponent } from './sensor-status/sensor-status.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ProfileComponent } from './profile/profile.component';
     WaterLevelIndicatorComponent,
     PointStatusComponent,
     SensorStatusComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,8 @@ import { ProfileComponent } from './profile/profile.component';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
