@@ -26,6 +26,32 @@ export class LandingPageComponent implements OnInit {
     }
     ]
   }];
+  sensors = [
+    {
+        sensorType: "motion",
+        location: "Balcony",
+        isTriggered: true,
+        shouldNotify: false,
+        shouldBuzzer: true,
+        icon: 'camera_outdoor'
+    },
+    {
+        sensorType: "fire",
+        location: "Kitchen",
+        isTriggered: false,
+        shouldNotify: false,
+        shouldBuzzer: true,
+        icon: 'local_fire_department'
+    },
+    {
+        sensorType: "smoke",
+        location: "Bedroom1",
+        isTriggered: false,
+        shouldNotify: false,
+        shouldBuzzer: true,
+        icon: 'smoke_free'
+    }
+];
   items: Observable<any[]>;
   constructor(db: AngularFireDatabase) {
     this.items = db.list('config').valueChanges();
@@ -36,6 +62,6 @@ export class LandingPageComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
+
 }

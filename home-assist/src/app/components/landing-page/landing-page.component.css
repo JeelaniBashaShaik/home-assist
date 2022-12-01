@@ -13,8 +13,13 @@
   height: 100%;
   margin: 5px;
 }
+.main-container-cards-accordion-panel-header {
+    padding-right: 0px;
+    padding-left: 10px;
+}
 .mat-title-with-icon {
     justify-content: space-between;
+    margin-right: 0px;
 }
 .mat-card {
   display: flex;
@@ -35,4 +40,25 @@
 }
 .vertical-align-middle {
     vertical-align: middle
+}
+.display-flex {
+    display: flex;
+}
+.padding-zero {
+    padding: 2px;
+}
+.padding-left-zero {
+    padding-left: 0px;
+}
+.padding-right-zero {
+    padding-right: 0px;
+}
+.text-align-end {
+    text-align: end;
+}
+.text-align-start {
+    text-align: start;
+}
+.justify-content-start {
+    justify-content: start;
 }
