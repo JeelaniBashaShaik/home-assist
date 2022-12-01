@@ -21,6 +21,8 @@ import { WaterLevelIndicatorComponent } from './water-level-indicator/water-leve
 import { PointStatusComponent } from './point-status/point-status.component';
 import { SensorStatusComponent } from './sensor-status/sensor-status.component';
 import { ProfileComponent } from './profile/profile.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { PointListComponent } from './point-list/point-list.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -32,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PointStatusComponent,
     SensorStatusComponent,
     ProfileComponent,
+    PointListComponent,
     LoginComponent
   ],
   imports: [
@@ -47,6 +50,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    MatSlideToggleModule,
+    MatIconModule,
+    MatCardModule,
+    FormsModule,
     FormsModule,
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
