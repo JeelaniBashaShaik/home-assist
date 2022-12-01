@@ -58,6 +58,7 @@ export class LandingPageComponent implements OnInit {
     this.items.subscribe((data): any => {
       this.profiles = data[1]
       this.points = data[0]
+      this.sensors = [data[2].fire, data[2].smoke, data[2].motion]
     })
   }
 
