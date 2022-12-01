@@ -12,20 +12,29 @@ import { WaterLevelIndicatorComponent } from './water-level-indicator/water-leve
 import { PointStatusComponent } from './point-status/point-status.component';
 import { SensorStatusComponent } from './sensor-status/sensor-status.component';
 import { ProfileComponent } from './profile/profile.component';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatIconModule} from '@angular/material/icon';
+import { PointListComponent } from './point-list/point-list.component';
+import { FormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
     WaterLevelIndicatorComponent,
     PointStatusComponent,
     SensorStatusComponent,
-    ProfileComponent
+    ProfileComponent,
+    PointListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    MatSlideToggleModule,
+    MatIconModule,
+    MatCardModule,
+    FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

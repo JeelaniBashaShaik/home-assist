@@ -1,0 +1,15 @@
+<div class="row" *ngFor="let point of points">
+    <div class="col-6">
+        <label>
+            <span *ngIf="!point.enableEdit">{{point.pointName}}</span>
+            <input *ngIf="point.enableEdit" type="text" [(ngModel)]="point.pointName">
+            <span class="pt-1"  style="cursor: pointer;">
+                <mat-icon *ngIf="!point.enableEdit" (click)="onPointEdit(point)">edit</mat-icon>
+                <mat-icon *ngIf="point.enableEdit" (click)="onPointSave(point)">save</mat-icon>
+            </span>
+        </label>
+    </div>
+    <div class="col-6">
+        <mat-slide-toggle [checked]="point.isOn"></mat-slide-toggle>
+    </div>
+</div>
