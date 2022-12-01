@@ -8,59 +8,53 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { WaterLevelIndicatorComponent } from './water-level-indicator/water-level-indicator.component';
-import { PointStatusComponent } from './point-status/point-status.component';
-import { SensorStatusComponent } from './sensor-status/sensor-status.component';
-import { LoginComponent } from './login/login.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
+import { MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from    '@angular/platform-browser/animations';
+import { WaterLevelIndicatorComponent } from './water-level-indicator/water-level-indicator.component';
+import { PointStatusComponent } from './point-status/point-status.component';
+import { SensorStatusComponent } from './sensor-status/sensor-status.component';
 import { ProfileComponent } from './profile/profile.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    AppComponent,
+    LandingPageComponent,
     WaterLevelIndicatorComponent,
     PointStatusComponent,
     SensorStatusComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginComponent
   ],
   imports: [
+    BrowserModule,
+    MatCardModule,
     MatButtonModule,
+    MatIconModule,
     MatMenuModule,
     MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    BrowserModule,
-    MatInputModule,
-    AppRoutingModule,
+    MatExpansionModule,
     MatFormFieldModule,
-    FormsModule,
-    ReactiveFormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-  ],
-  exports: [
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

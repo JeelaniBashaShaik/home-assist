@@ -1,0 +1,38 @@
+.main-container-height {
+  height: 100vh;
+  padding: 10px;
+}
+.main-container-cards-row-height {
+  height: 48vh;
+  margin: 5px;
+}
+.main-container-cards-column-padding {
+  padding: 0px;
+}
+.main-container-cards-height {
+  height: 100%;
+  margin: 5px;
+}
+.mat-title-with-icon {
+    justify-content: space-between;
+}
+.mat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card-header {
+  flex-shrink: 0;
+}
+
+.mat-card-content {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.profile-icon-active {
+   color: #FB8C00;
+}
+.vertical-align-middle {
+    vertical-align: middle
+}
