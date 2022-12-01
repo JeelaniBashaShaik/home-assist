@@ -1,5 +1,5 @@
 <div style="overflow-x: hidden;">
-    <div class="row" *ngFor="let point of points">
+    <div class="row" *ngFor="let point of points; let i = index">
         <div class="col-6">
             <label>
                 <span *ngIf="!point.enableEdit">{{point.pointName}}</span>
@@ -11,7 +11,7 @@
             </label>
         </div>
         <div class="col-6">
-            <mat-slide-toggle [checked]="point.isOn"></mat-slide-toggle>
+            <mat-slide-toggle [checked]="point.isOn" (change)="toggle($event, i)"></mat-slide-toggle>
         </div>
     </div>
 </div>
