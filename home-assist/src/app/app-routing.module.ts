@@ -7,10 +7,10 @@ import { SensorStatusComponent } from './sensor-status/sensor-status.component';
 import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
-  { path: '/water-level', component: WaterLevelIndicatorComponent },
-  { path: '/point-status', component: PointStatusComponent },
-  { path: '/sensor-status', component: SensorStatusComponent },
-  { path: '/login', component: LoginComponent },
+  { path: 'water-level', component: WaterLevelIndicatorComponent },
+  { path: 'point-status', component: PointStatusComponent },
+  { path: 'sensor-status', component: SensorStatusComponent },
+  { path: 'login', component: LoginComponent },
   {path: 'profile', component: ProfileComponent}
 ];
 
