@@ -4,9 +4,9 @@
             <label>
                 <span *ngIf="!point.enableEdit">{{point.pointName}}</span>
                 <input *ngIf="point.enableEdit" type="text" [(ngModel)]="point.pointName">
-                <span class="pt-2"  style="cursor: pointer;">
-                    <mat-icon *ngIf="!point.enableEdit" (click)="onPointEdit(point)">edit</mat-icon>
-                    <mat-icon *ngIf="point.enableEdit" (click)="onPointSave(point)">save</mat-icon>
+                <span class="px-2"  style="cursor: pointer; font-size: small;">
+                    <mat-icon style="font-size: medium;" *ngIf="!point.enableEdit" (click)="onPointEdit(point)">edit</mat-icon>
+                    <mat-icon style="font-size: medium; margin-top:4px" *ngIf="point.enableEdit" (click)="onPointSave(point)">save</mat-icon>
                 </span>
             </label>
         </div>

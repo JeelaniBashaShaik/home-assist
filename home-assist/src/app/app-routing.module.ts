@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'point-status', component: PointStatusComponent },
   { path: 'sensor-status', component: SensorStatusComponent },
   {path: 'profile', component: ProfileComponent},
-  {path: 'point-list', component: PointListComponent}
+  {path: 'point-list', component: PointListComponent},
   { path: 'login', component: LoginComponent },
   { path: '', component: LoginComponent },
   { path: 'landing-page', component: LandingPageComponent },
