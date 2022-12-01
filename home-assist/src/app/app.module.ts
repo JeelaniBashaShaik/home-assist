@@ -8,6 +8,15 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule} from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {BrowserAnimationsModule} from    '@angular/platform-browser/animations';
 import { WaterLevelIndicatorComponent } from './water-level-indicator/water-level-indicator.component';
 import { PointStatusComponent } from './point-status/point-status.component';
 import { SensorStatusComponent } from './sensor-status/sensor-status.component';
@@ -20,6 +29,7 @@ import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
+    LandingPageComponent,
     WaterLevelIndicatorComponent,
     PointStatusComponent,
     SensorStatusComponent,
@@ -28,7 +38,15 @@ import {MatCardModule} from '@angular/material/card';
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatFormFieldModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     MatSlideToggleModule,
