@@ -17,11 +17,19 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from    '@angular/platform-browser/animations';
+import { WaterLevelIndicatorComponent } from './water-level-indicator/water-level-indicator.component';
+import { PointStatusComponent } from './point-status/point-status.component';
+import { SensorStatusComponent } from './sensor-status/sensor-status.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    WaterLevelIndicatorComponent,
+    PointStatusComponent,
+    SensorStatusComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
