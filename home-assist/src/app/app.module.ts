@@ -23,7 +23,9 @@ import { SensorStatusComponent } from './sensor-status/sensor-status.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { PointListComponent } from './point-list/point-list.component';
-import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     PointStatusComponent,
     SensorStatusComponent,
     ProfileComponent,
-    PointListComponent
+    PointListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,8 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatCardModule,
     FormsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
