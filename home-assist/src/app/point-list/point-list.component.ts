@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-point-list',
@@ -6,20 +6,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./point-list.component.css']
 })
 export class PointListComponent implements OnInit {
-  points: any[] = [{
+  @Input() points: any[] = [{
+    pointId: "point1",
+    pointName: "Hall Light",
+    isOn: false
+  },
+  {
+    pointId: "point2",
+    pointName: "Hall Fan 1",
+    isOn: true
+  },
+  {
     pointName: 'Point 1',
     isOn: true,
-    pointId: 1
+    pointId: "point3"
   },
   {
     pointName: 'Point 2',
     isOn: false,
-    pointId: 2
+    pointId: "point4"
   },
   {
     pointName: 'Point 3',
     isOn: true,
-    pointId: 3
+    pointId: 'point5'
   }]
   constructor() { }
 
