@@ -60,6 +60,10 @@ export class LandingPageComponent implements OnInit {
       this.points = data[0]
     })
   }
+  editProfile(event: any) {
+    console.log(event, 'editing profile...');
+    // document.getElementById('flip-card-inner')?.style.transform = "rotateY(180deg)";
+  }
 
   ngOnInit() {
   }

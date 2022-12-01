@@ -30,7 +30,8 @@ export class PointListComponent implements OnInit {
     pointName: 'Point 3',
     isOn: true,
     pointId: 'point5'
-  }]
+  }];
+  @Input() readonly: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

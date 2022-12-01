@@ -29,7 +29,7 @@
                   </div>
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <app-point-list [points]="profile.pointConfig"></app-point-list>
+              <app-point-list [points]="profile.pointConfig" [readonly]="true"></app-point-list>
             </mat-expansion-panel>
           </mat-accordion>
         </mat-card-content>
@@ -44,7 +44,7 @@
           <mat-card-title>Points</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <app-point-list [points]="points"></app-point-list> </mat-card-content>
+          <app-point-list [points]="points" [readonly]="false"></app-point-list> </mat-card-content>
       </mat-card>
     </div>
   </div>
