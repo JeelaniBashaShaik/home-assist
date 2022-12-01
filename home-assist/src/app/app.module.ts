@@ -11,17 +11,37 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { WaterLevelIndicatorComponent } from './water-level-indicator/water-level-indicator.component';
 import { PointStatusComponent } from './point-status/point-status.component';
 import { SensorStatusComponent } from './sensor-status/sensor-status.component';
+import { LoginComponent } from './login/login.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
+    AppComponent,
+    LoginComponent,
     AppComponent,
     WaterLevelIndicatorComponent,
     PointStatusComponent,
     SensorStatusComponent
   ],
   imports: [
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
     BrowserModule,
+    MatInputModule,
     AppRoutingModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -30,6 +50,13 @@ import { SensorStatusComponent } from './sensor-status/sensor-status.component';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+  ],
+  exports: [
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
