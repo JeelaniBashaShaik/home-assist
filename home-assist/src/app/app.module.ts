@@ -22,10 +22,8 @@ import { PointStatusComponent } from './point-status/point-status.component';
 import { SensorStatusComponent } from './sensor-status/sensor-status.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatIconModule} from '@angular/material/icon';
 import { PointListComponent } from './point-list/point-list.component';
 import { FormsModule } from '@angular/forms';
-import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
